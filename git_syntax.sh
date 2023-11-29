@@ -24,6 +24,7 @@ git clone 클론할주소
 git remote set-url origin 내레포주소
 git checkout -b main  # 다운로드 받은 기본 브랜치가 main이 아닐경우
 git push --all origin main
+
 # 커밋 이력 안남기기
 git clone 클론할주소
 .git폴더 삭제
@@ -32,3 +33,13 @@ git remote add origin 내레포주소
 git add .
 git commit -m "커밋메시지"
 git push origin main
+
+git config --list # config 내용 확인
+
+# 전역적 사용자 지정
+git config —global user.name “qoth-0”
+git config —global user.email “bny1324@naver.com”
+
+# 지역적 사용자 지정
+git config —local user.name “qoth-0”
+git config —local user.email “bny1324@naver.com”
