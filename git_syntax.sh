@@ -1,12 +1,14 @@
 git add . # 전부 추가사항에 올린다
 git add test2.txt # test2.txt만 추가사항에 올린다
 git commit -m "commit message" # commit
+git commit -m "title" -m "content" # commit 상세
+git commit -am “커밋메시지” # add와 commit 동시에
 git branch # 현재 branch 확인
 git push origin main # 원격 main branch에 push 하겠다.
 git status # 파일 상태 확인
 git log # 커밋 이력 확인
 git checkout -b branch # branch를 만들면서 이동
-git commit -am “커밋메시지” # add와 commit 동시에
+
 
 git clone https://github.com/qoth-0/git_study.git # 깃 클론
 git clone https://토큰정보:x-oauth-basic@github.com/qoth-0/git_study.git # private레포 토큰정보 입력하면서 클론하기
