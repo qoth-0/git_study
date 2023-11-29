@@ -5,12 +5,16 @@ git commit -m "title" -m "content" # commit 상세
 git commit -am "commit message" # add와 commit 동시에
 git branch # 현재 branch 확인
 git push origin main # 원격 main branch에 push 하겠다.
+git push —all # 모든 브랜치의 커밋 이력 push
 git push origin main --force # 충돌 무시하고 강제 push
 git status # 파일 상태 확인
 git log # 커밋 이력 확인
 git log --oneline # 커밋 이력 간결하게
 git checkout -b branch # branch를 만들면서 이동
 git pull origin main # origin 내용 가져오기
+git checkout . # 파일 수정사항 취소
+git clean -fdx # 파일을 신규추가 한 경우의 취소
+git checkout . | git clean -fdx # 수정 및 추가 모두 취소
 
 
 git clone https://github.com/qoth-0/git_study.git # 깃 클론
@@ -43,10 +47,10 @@ git push origin main
 git config --list # config 내용 확인
 
 # 전역적 사용자 지정
-git config —global user.name “qoth-0”
-git config —global user.email “bny1324@naver.com”
+git config —global user.name "qoth-0"
+git config —global user.email "bny1324@naver.com"
 
 # 지역적 사용자 지정
-git config —local user.name “qoth-0”
-git config —local user.email “bny1324@naver.com”
+git config —local user.name "qoth-0"
+git config —local user.email "bny1324@naver.com"
 
