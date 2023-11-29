@@ -2,11 +2,13 @@ git add . # 전부 추가사항에 올린다
 git add test2.txt # test2.txt만 추가사항에 올린다
 git commit -m "commit message" # commit
 git commit -m "title" -m "content" # commit 상세
-git commit -am “커밋메시지” # add와 commit 동시에
+git commit -am "commit message" # add와 commit 동시에
 git branch # 현재 branch 확인
 git push origin main # 원격 main branch에 push 하겠다.
+git push origin main --force # 충돌 무시하고 강제 push
 git status # 파일 상태 확인
 git log # 커밋 이력 확인
+git log --oneline # 커밋 이력 간결하게
 git checkout -b branch # branch를 만들면서 이동
 
 
