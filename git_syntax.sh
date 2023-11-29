@@ -6,6 +6,7 @@ git push origin main # 원격 main branch에 push 하겠다.
 git status # 파일 상태 확인
 git log # 커밋 이력 확인
 git checkout -b branch # branch를 만들면서 이동
+git commit -am “커밋메시지” # add와 commit 동시에
 
 git clone https://github.com/qoth-0/git_study.git # 깃 클론
 git clone https://토큰정보:x-oauth-basic@github.com/qoth-0/git_study.git # private레포 토큰정보 입력하면서 클론하기
@@ -43,3 +44,4 @@ git config —global user.email “bny1324@naver.com”
 # 지역적 사용자 지정
 git config —local user.name “qoth-0”
 git config —local user.email “bny1324@naver.com”
+
