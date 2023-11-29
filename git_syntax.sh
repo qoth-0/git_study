@@ -13,9 +13,7 @@ git log --oneline # 커밋 이력 간결하게
 git log --all # 전체 이력
 git checkout -b branch # branch를 만들면서 이동
 git pull origin main # origin 내용 가져오기
-git checkout . # 파일 수정사항 취소
-git clean -fdx # 파일을 신규추가 한 경우의 취소
-git checkout . | git clean -fdx # 수정 및 추가 모두 취소
+
 
 
 git clone https://github.com/qoth-0/git_study.git # 깃 클론
@@ -55,3 +53,17 @@ git config —global user.email "bny1324@naver.com"
 git config —local user.name "qoth-0"
 git config —local user.email "bny1324@naver.com"
 
+# working directory의 수정사항 취소
+git checkout . # 파일 수정사항 취소
+git clean -fdx # 파일을 신규추가 한 경우의 취소
+git checkout . | git clean -fdx # 수정 및 추가 모두 취소
+
+# add 이후 취소
+git reset
+git restore --staged
+
+# commit 이후 취소
+git reset HEAD~1 # unstaged 상태로 만듬
+git reset —soft HEAD~1  # staged 상태 유지
+
+# push 후 origin까지 배포된 사항 취소
