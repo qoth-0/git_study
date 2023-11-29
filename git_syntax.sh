@@ -10,6 +10,7 @@ git status # 파일 상태 확인
 git log # 커밋 이력 확인
 git log --oneline # 커밋 이력 간결하게
 git checkout -b branch # branch를 만들면서 이동
+git pull origin main # origin 내용 가져오기
 
 
 git clone https://github.com/qoth-0/git_study.git # 깃 클론
