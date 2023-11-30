@@ -4,13 +4,14 @@ git commit -m "commit message" # commit
 git commit -m "title" -m "content" # commit 상세
 git commit -am "commit message" # add와 commit 동시에
 git branch # 현재 branch 확인
-git push origin main # 원격 main branch에 push 하겠다.
+git push origin main # 원격 main branch에 업로드
 git push origin main --force # 충돌 무시하고 강제 push
-git push —all # 모든 브랜치의 커밋 이력 push
-git status # 파일 상태 확인
+git push --all # 모든 브랜치의 커밋 이력 push
+git status # 파일 상태 확인 - 커밋 전까지
 git log # 커밋 이력 확인
 git log --oneline # 커밋 이력 간결하게
 git log --all # 전체 이력
+git checkout branch # branch 변경
 git checkout -b branch # branch를 만들면서 이동
 git pull origin main # origin 내용 가져오기
 
@@ -32,7 +33,7 @@ git remote set-url origin # 오리진 변경
 git clone 클론할주소
 git remote set-url origin 내레포주소
 git checkout -b main  # 다운로드 받은 기본 브랜치가 main이 아닐경우
-git push --all origin main
+git push --all
 
 # 커밋 이력 안남기기
 git clone 클론할주소
@@ -46,14 +47,14 @@ git push origin main
 git config --list # config 내용 확인
 
 # 전역적 사용자 지정
-git config —global user.name "qoth-0"
-git config —global user.email "bny1324@naver.com"
+git config --global user.name "qoth-0"
+git config --global user.email "bny1324@naver.com"
 
 # 지역적 사용자 지정
-git config —local user.name "qoth-0"
-git config —local user.email "bny1324@naver.com"
+git config --local user.name "qoth-0"
+git config --local user.email "bny1324@naver.com"
 
-# working directory의 수정사항 취소
+# working directory의 수정사항 취소 
 git checkout . # 파일 수정사항 취소
 git clean -fdx # 파일을 신규추가 한 경우의 취소
 git checkout . | git clean -fdx # 수정 및 추가 모두 취소
@@ -63,7 +64,10 @@ git reset
 git restore --staged
 
 # commit 이후 취소
-git reset HEAD~1 # unstaged 상태로 만듬
+git reset HEAD~1 # 최신 head를 취소(방금 커밋한 것) - unstaged 상태로 만듬(working directory)
 git reset —soft HEAD~1  # staged 상태 유지
 
 # push 후 origin까지 배포된 사항 취소
+git revert commitID # 특정 커밋ID를 취소시키는 커밋ID를 생성하기 때문에 이후 push만 하면 됨
+
+git diff commit1 commit2 # commit1과 2를 비교
