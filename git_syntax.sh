@@ -79,3 +79,5 @@ git merge origin main # origin과 병합
 
 git branch # 현재 저장소의 모든 branch 목록
 git branch branchname # branch 생성
+git checkout branchname # branchname으로 변경
+git checkout -b brachname # 만들고 변경 한꺼번에
