@@ -3,7 +3,6 @@ git add test2.txt # test2.txt만 추가사항에 올린다
 git commit -m "commit message" # commit
 git commit -m "title" -m "content" # commit 상세
 git commit -am "commit message" # add와 commit 동시에
-git branch # 현재 branch 확인
 git push origin main # 원격 main branch에 업로드
 git push origin main --force # 충돌 무시하고 강제 push
 git push --all # 모든 브랜치의 커밋 이력 push
@@ -71,3 +70,12 @@ git reset —soft HEAD~1  # staged 상태 유지
 git revert commitID # 특정 커밋ID를 취소시키는 커밋ID를 생성하기 때문에 이후 push만 하면 됨
 
 git diff commit1 commit2 # commit1과 2를 비교
+
+git fetch origin main # origin의 커밋이력만 가지고 옴
+git diff origin origin/main #  main과 origin main과의 차이 비교
+git merge origin main # origin과 병합
+
+
+
+git branch # 현재 저장소의 모든 branch 목록
+git branch branchname # branch 생성
