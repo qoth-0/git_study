@@ -69,7 +69,7 @@ git reset —soft HEAD~1  # staged 상태 유지
 # push 후 origin까지 배포된 사항 취소
 git revert commitID # 특정 커밋ID를 취소시키는 커밋ID를 생성하기 때문에 이후 push만 하면 됨
 
-git diff commit1 commit2 # commit1과 2를 비교
+git diff commitID1 commitID2 # commit1과 2를 비교
 
 git fetch origin main # origin의 커밋이력만 가지고 옴
 git diff origin origin/main #  main과 origin main과의 차이 비교
